@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
 import ProductInterface from '../../../interfaces/ProductInterface'
+import { getProducts } from '../service'
 
 const useInitialProductsList = () => {
   const [products, setProducts] = useState<ProductInterface[]>([])
   useEffect(() => {
+    console.log(getProducts())
     // getProducts().then(
     //   async (productsFromDb: firebase.firestore.QuerySnapshot<firebase.firestore.DocumentData> | null) => {
     //     if (productsFromDb) {
