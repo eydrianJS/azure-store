@@ -1,0 +1,12 @@
+.counterButtons {
+  height: 80%;
+  margin: 3px !important;
+}
+.counterBox {
+  height: 60px;
+  margin: 3px;
+}
+.counter {
+  width: 100px;
+  height: 55px;
+}
