@@ -20,7 +20,7 @@ const ListProduct = ({ product }: ListProductParams) => {
       alignItems="flex-start"
       className={classes.root}
       component={Link}
-      to={`/product/${product.id}`}>
+      to={`/product/${product._id}`}>
       <Paper elevation={3} className={classes.parent}>
         <img alt={product.image} src={product.image} title="Contemplative Reptile" className={classes.children} />
         <Grid

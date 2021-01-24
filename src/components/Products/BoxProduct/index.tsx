@@ -15,7 +15,7 @@ const BoxProduct = ({ product }: BoxProductParams) => {
   const classes = useStyles()
   return (
     <Card className={classes.root}>
-      <CardActionArea component={Link} to={`/product/${product.id}`}>
+      <CardActionArea component={Link} to={`/product/${product._id}`}>
         <CardMedia
           component="img"
           alt={product.image}

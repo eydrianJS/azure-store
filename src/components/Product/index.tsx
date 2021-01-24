@@ -1,7 +1,7 @@
 import React from 'react'
 import Paper from '@material-ui/core/Paper'
 import useStyles from './styles'
-import ImagesCarousel from './ImagesCarousel'
+// import ImagesCarousel from './ImagesCarousel'
 import MainInformation from './MainInformation'
 import Parameters from './Parameters'
 import Description from './Description'
@@ -19,9 +19,7 @@ const Product = ({ id }: ProductParams) => {
   return (
     <>
       <Paper className={classes.paper}>
-        <div className={classes.image}>
-          <ImagesCarousel images={product.images} />
-        </div>
+        <div className={classes.image}>{/* <ImagesCarousel images={product.images} /> */}</div>
         <div style={{ width: '50%', margin: 30 }}>
           <MainInformation product={product} />
         </div>

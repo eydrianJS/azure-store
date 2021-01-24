@@ -9,7 +9,7 @@ const useChangeCounterOnShoppingCart = (product: ProductInterface | undefined, c
   const changeCouterOnShoppingCart = () => {
     if (product) {
       const productIndex = shoppingCart.findIndex(
-        (productInBasket: ProductInterface) => productInBasket.id === product.id
+        (productInBasket: ProductInterface) => productInBasket._id === product._id
       )
       const newState: ProductInterface[] = [...shoppingCart]
       const currentProduct: ProductInterface = { ...newState[productIndex] }

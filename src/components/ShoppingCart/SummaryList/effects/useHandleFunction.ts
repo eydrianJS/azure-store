@@ -9,12 +9,12 @@ const useHandleFunction = (product: ProductInterface) => {
 
   const handleRemoveProduct = () => {
     let newState = [...shoppingCart]
-    newState = newState.filter((currentProduct) => currentProduct.id !== product.id)
+    newState = newState.filter((currentProduct) => currentProduct._id !== product._id)
     setShoppingCart(newState)
   }
 
   const handleToggle = () => {
-    const productIndex = shoppingCart.findIndex((productInBasket) => productInBasket.id === product.id)
+    const productIndex = shoppingCart.findIndex((productInBasket) => productInBasket._id === product._id)
     const newState: ProductInterface[] = [...shoppingCart]
     const currentProduct: ProductInterface = { ...newState[productIndex] }
     currentProduct.checked = !checked

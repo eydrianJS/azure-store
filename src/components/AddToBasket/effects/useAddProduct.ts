@@ -7,7 +7,7 @@ const useAddProduct = (product: ProductInterface, counterOfProduct: number) => {
   const [shoppingCart, setShoppingCart] = useContext<ShoppingCardContextInterface>(ShoppingCartContext)
 
   const addProduct = useCallback(() => {
-    const productIndex = shoppingCart.findIndex((productInBasket) => productInBasket.id === product.id)
+    const productIndex = shoppingCart.findIndex((productInBasket) => productInBasket._id === product._id)
     let newState: ProductInterface[] = [...shoppingCart]
     if (productIndex !== -1) {
       const copyProduct: ProductInterface = { ...newState[productIndex] }

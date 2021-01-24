@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import ProductInterface from '../../../interfaces/ProductInterface'
+import { getProduct } from '../service'
 
 const initialProduct: ProductInterface = {
-  id: '',
+  _id: '',
   title: '',
   content: '',
   image: '',
@@ -15,8 +16,11 @@ const useInitialProducts = (id: string) => {
   const [product, setProduct] = useState<ProductInterface>(initialProduct)
 
   useEffect(() => {
+    getProduct(id)
+      .then((response) => response.data)
+      .then((products) => setProduct(products))
     setProduct({
-      id: '1',
+      _id: '1',
       title: 'aaa',
       content: 'string',
       image: 'string',

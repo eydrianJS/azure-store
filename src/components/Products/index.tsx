@@ -16,9 +16,9 @@ const Products = ({ list }: ProductsParams) => {
       {products
         ? products.map((product: ProductInterface) => {
             return list ? (
-              <ListProduct product={product} key={product.id} />
+              <ListProduct product={product} key={product._id} />
             ) : (
-              <BoxProduct product={product} key={product.id} />
+              <BoxProduct product={product} key={product._id} />
             )
           })
         : false}

@@ -36,7 +36,7 @@ export default function SummaryList({ product, idx }: SummaryListParams) {
             edge="start"
             checked={checked}
             tabIndex={-1}
-            inputProps={{ 'aria-labelledby': product.id }}
+            inputProps={{ 'aria-labelledby': product._id }}
             className={classes.children}
             onClick={handleToggle}
           />
