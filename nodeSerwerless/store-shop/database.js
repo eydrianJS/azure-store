@@ -45,7 +45,7 @@ exports.deleteOne = async (client, productId) =>
     client
       .db(dbName)
       .collection(collectionName)
-      .deleteOne(productId, (err, res) => {
+      .deleteOne({ _id: productId }, (err, res) => {
         if (err != null) {
           return reject(err)
         }
