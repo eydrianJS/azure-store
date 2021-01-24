@@ -40,7 +40,12 @@ export default function SummaryList({ product, idx }: SummaryListParams) {
             className={classes.children}
             onClick={handleToggle}
           />
-          <img alt="Product" src={product.image} title="Contemplative Reptile" className={classes.children} />
+          <img
+            alt="Product"
+            src="https://picsum.photos/200"
+            title="Contemplative Reptile"
+            className={classes.children}
+          />
           <Grid
             container={true}
             direction="column"

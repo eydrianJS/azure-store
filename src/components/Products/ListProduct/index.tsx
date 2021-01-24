@@ -22,7 +22,12 @@ const ListProduct = ({ product }: ListProductParams) => {
       component={Link}
       to={`/product/${product._id}`}>
       <Paper elevation={3} className={classes.parent}>
-        <img alt={product.image} src={product.image} title="Contemplative Reptile" className={classes.children} />
+        <img
+          alt={product.image}
+          src="https://picsum.photos/100"
+          title="Contemplative Reptile"
+          className={classes.children}
+        />
         <Grid
           container={true}
           direction="column"

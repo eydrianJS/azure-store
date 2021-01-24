@@ -19,7 +19,7 @@ const BoxProduct = ({ product }: BoxProductParams) => {
         <CardMedia
           component="img"
           alt={product.image}
-          image={product.image}
+          image="https://picsum.photos/200"
           title="Contemplative Reptile"
           className={classes.image}
         />
